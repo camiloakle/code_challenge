@@ -98,6 +98,13 @@ Solo el dashboard: `docker compose up -d dashboard`.
 
 Los DAGs leen/escriben rutas bajo el repo montado en **`/opt/project`** (Airflow) y **`/app`** (Streamlit). Asegúrate de tener **`data/raw`** con los ficheros del challenge antes de lanzar pipelines desde Airflow.
 
+## Screenshots
+### Dashboard (Streamlit)
+![Dashboard - Q5 Strategic advisor](docs/images/image.png)
+
+### Airflow (DAGs)
+![Airflow - Billups medallion_master](docs/images/image_2.png)
+
 ## Quickstart
 
 ```bash
