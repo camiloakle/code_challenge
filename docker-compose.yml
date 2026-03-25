@@ -11,10 +11,12 @@ x-airflow-common: &airflow-common
     context: .
     dockerfile: docker/Dockerfile.airflow
   image: billups-airflow:2.11.2-local
-  # Dev convenience: if AIRFLOW_UID is not exported, run as root to avoid
-  # permission issues writing under the bind-mounted repo (e.g. data/bronze).
-  # Recommended on Linux: export AIRFLOW_UID=$(id -u)
-  user: "${AIRFLOW_UID:-0}:0"
+  # IMPORTANT:
+  # No forzamos `user: ${AIRFLOW_UID}:0` aquí.
+  # Forzarlo hace que Airflow arranque con un UID que puede no existir en
+  # /etc/passwd dentro del contenedor, y termina fallando con:
+  # "The user that Airflow is running as has no username".
+  # La imagen ya define el usuario `airflow` y su username/UID internamente.
   environment: &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
