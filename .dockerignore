@@ -1,0 +1,14 @@
+venv/
+.git/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+*.pyc
+.airflow/
+airflow/logs/
+*.log
+.DS_Store
+data/bronze/
+data/silver/
+# Keep data/raw and data/gold mountable; ignore huge local caches if any
+*.egg-info/

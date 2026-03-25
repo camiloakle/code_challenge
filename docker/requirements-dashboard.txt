@@ -1,0 +1,7 @@
+# Imagen Streamlit ligera (alineado con dashboard/requirements-dashboard.txt)
+streamlit>=1.50.0,<2.0.0
+plotly>=6.0.0,<7.0.0
+pandas>=2.2.0,<3.0.0
+pyarrow>=18.0.0,<21.0.0
+pydantic>=2.10.0,<3.0.0
+pydantic-settings>=2.6.0,<3.0.0

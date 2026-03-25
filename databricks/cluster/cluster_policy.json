@@ -1,0 +1,10 @@
+{
+  "spark_version": {
+    "type": "fixed",
+    "value": "13.3.x-scala2.12"
+  },
+  "node_type_id": {
+    "type": "allowlist",
+    "values": ["i3.xlarge", "i3.2xlarge"]
+  }
+}

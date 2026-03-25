@@ -1,0 +1,8 @@
+# PySpark + Delta en contenedor Airflow (mismo rango que requirements.txt raíz)
+pyspark>=3.5.0,<3.6.0
+delta-spark>=3.3.0,<3.4.0
+pydantic>=2.10.0,<3.0.0
+pydantic-settings>=2.6.0,<3.0.0
+loguru>=0.7.3,<0.8.0
+pandas>=2.2.0,<3.0.0
+pyarrow>=18.0.0,<21.0.0
